@@ -6,14 +6,14 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 09:56:23 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/18 20:08:56 by eboris           ###   ########.fr       */
+/*   Updated: 2019/09/28 13:44:52 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_itoa_minus(int *n, int *minus, int *temp)
+static void		ft_itoa_minus(int *n, int *minus, int *temp)
 {
 	if (*n == -2147483648)
 	{
@@ -35,9 +35,9 @@ void	ft_itoa_minus(int *n, int *minus, int *temp)
 	}
 }
 
-int		ft_itoa_len(int n)
+static int		ft_itoa_len(int n)
 {
-	int	len;
+	int			len;
 
 	len = 0;
 	while (n > 9)
@@ -49,7 +49,7 @@ int		ft_itoa_len(int n)
 	return (len);
 }
 
-void	ft_itoa_write(char *finish, int len, int n, int temp)
+static void		ft_itoa_write(char *finish, int len, int n, int temp)
 {
 	while (n > 9)
 	{
@@ -60,12 +60,12 @@ void	ft_itoa_write(char *finish, int len, int n, int temp)
 	finish[len] = n + '0';
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	int		minus;
-	int		temp;
-	int		len;
-	char	*finish;
+	int			minus;
+	int			temp;
+	int			len;
+	char		*finish;
 
 	ft_itoa_minus(&n, &minus, &temp);
 	len = ft_itoa_len(n);

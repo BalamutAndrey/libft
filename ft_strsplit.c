@@ -6,18 +6,18 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 19:35:34 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/17 22:26:40 by eboris           ###   ########.fr       */
+/*   Updated: 2019/09/28 13:46:01 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int		ft_strsplit_words(char const *s, char c)
+static int	ft_strsplit_words(char const *s, char c)
 {
-	int i;
-	int n;
-	int	m;
+	int		i;
+	int		n;
+	int		m;
 
 	i = 0;
 	n = 0;
@@ -36,10 +36,10 @@ int		ft_strsplit_words(char const *s, char c)
 	return (n);
 }
 
-int		ft_strsplit_len(char const *s, char c)
+static int	ft_strsplit_len(char const *s, char c)
 {
-	int i;
-	int len;
+	int		i;
+	int		len;
 
 	i = 0;
 	len = 0;
@@ -51,7 +51,7 @@ int		ft_strsplit_len(char const *s, char c)
 	return (len);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	int		m;
 	int		words;

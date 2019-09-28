@@ -6,16 +6,16 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 01:36:40 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/12 03:17:28 by eboris           ###   ########.fr       */
+/*   Updated: 2019/09/28 13:43:12 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi_atoi(char *str)
+static int	ft_atoi_atoi(char *str)
 {
-	int	i;
-	int fin;
+	int		i;
+	int		fin;
 
 	i = 0;
 	fin = 0;
@@ -30,7 +30,7 @@ int	ft_atoi_atoi(char *str)
 	return (fin);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int		i;
 	int		fin;

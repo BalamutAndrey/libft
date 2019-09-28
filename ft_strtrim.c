@@ -6,14 +6,14 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 17:21:56 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/18 19:35:33 by eboris           ###   ########.fr       */
+/*   Updated: 2019/09/28 13:46:37 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strcpy_trim(char *tmp, int i)
+static char	*ft_strcpy_trim(char *tmp, int i)
 {
 	int		n;
 	char	*str;
@@ -33,7 +33,7 @@ char	*ft_strcpy_trim(char *tmp, int i)
 	return (str);
 }
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
 	int		i;
 	int		n;
