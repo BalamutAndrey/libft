@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 18:55:39 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/18 18:54:37 by eboris           ###   ########.fr       */
+/*   Updated: 2019/09/28 14:18:08 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	need = (char *)needle;
 	hay = (char *)haystack;
 	l = ft_strlen(needle);
-	if (len == 0)
-		return (&hay[0]);
 	if (l == 0)
 		return (&hay[0]);
+	if (len == 0)
+		return (NULL);
 	n = -1;
 	while (hay[++n] != '\0')
 	{
