@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 17:21:56 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/28 13:46:37 by eboris           ###   ########.fr       */
+/*   Updated: 2019/10/05 16:34:16 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ char		*ft_strtrim(char const *s)
 
 	i = 0;
 	n = 0;
+	if (!s)
+		return (NULL);
 	tmp = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!(tmp))
 		return (NULL);

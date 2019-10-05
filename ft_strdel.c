@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 09:35:31 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/13 10:20:40 by eboris           ###   ########.fr       */
+/*   Updated: 2019/10/05 15:19:22 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 
 void	ft_strdel(char **as)
 {
-	if (*as != NULL)
+	if (as && *as)
 	{
-		free(*as);
-		*as = NULL;
+		ft_memdel((void *)as);
 	}
 }

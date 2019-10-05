@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 18:58:13 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/18 19:28:52 by eboris           ###   ########.fr       */
+/*   Updated: 2019/10/05 16:02:48 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	n = 0;
+	if (!s || !*s)
+		return (NULL);
 	while ((s[i] != '\0') && (i < start))
 		i++;
 	if (i != start)

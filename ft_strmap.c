@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 12:05:37 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/13 13:33:53 by eboris           ###   ########.fr       */
+/*   Updated: 2019/10/05 15:37:19 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmap(char const *s, char (f)(char))
 	size_t	len;
 	size_t	i;
 
+	if (!s || !*s || !f)
+		return (NULL);
 	len = ft_strlen(s);
 	temp = malloc((len + 1) * sizeof(char));
 	i = 0;

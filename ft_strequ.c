@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 14:04:32 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/13 14:10:33 by eboris           ###   ########.fr       */
+/*   Updated: 2019/10/05 15:59:29 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ int	ft_strequ(char const *s1, char const *s2)
 	size_t	i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (0);
+	if (s1[i] == '\0' && s2[i] == '\0')
+		return (1);
 	if (ft_strlen(s1) != ft_strlen(s2))
 		return (0);
 	while ((s1[i] != '\0') || (s2[i] != '\0'))
@@ -25,5 +29,7 @@ int	ft_strequ(char const *s1, char const *s2)
 			return (0);
 		i++;
 	}
-	return (1);
+	if (s1[i] == '\0' && s2[i] == '\0' && i != 0)
+		return (1);
+	return (0);
 }
