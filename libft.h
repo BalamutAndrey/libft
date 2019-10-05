@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:38:03 by eboris            #+#    #+#             */
-/*   Updated: 2019/10/05 17:18:11 by eboris           ###   ########.fr       */
+/*   Updated: 2019/10/05 18:38:54 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,5 @@ void				ft_lstiter(t_list *lst, void (*f) (t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem));
 int					get_next_line(const int fd, char **line);
 char				*ft_strjoinfree(char const *s1, char const *s2);
+void				ft_putnstr(char const *s, size_t size);
 #endif
