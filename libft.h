@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:38:03 by eboris            #+#    #+#             */
-/*   Updated: 2019/09/18 12:58:30 by eboris           ###   ########.fr       */
+/*   Updated: 2019/10/05 17:18:11 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,6 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f) (t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem));
+int					get_next_line(const int fd, char **line);
+char				*ft_strjoinfree(char const *s1, char const *s2);
 #endif
