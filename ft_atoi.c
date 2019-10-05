@@ -6,25 +6,26 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 01:36:40 by eboris            #+#    #+#             */
-/*   Updated: 2019/10/05 16:51:03 by eboris           ###   ########.fr       */
+/*   Updated: 2019/10/05 19:37:06 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_atoi_atoi(char *str, int minus)
+static long	ft_atoi_atoi(char *str, int minus)
 {
 	int		i;
-	int		fin;
+	long	fin;
 
 	i = 0;
 	fin = 0;
 	while (((unsigned char)str[i] >= '0') && ((unsigned char)str[i] <= '9'))
 	{
-		if (minus == 1)
-			fin = (fin * 10) + ((unsigned char)str[i] - 48);
-		else
-			fin = (fin * 10) - ((unsigned char)str[i] - 48);
+		if ((((fin * 10) + (str[i] - 48)) < fin) && (minus == 1))
+			return (-1);
+		else if ((((fin * 10) + (str[i] - 48)) < fin) && (minus == -1))
+			return (0);
+		fin = (fin * 10) + ((unsigned char)str[i] - 48);
 		i++;
 	}
 	return (fin);
@@ -33,7 +34,7 @@ static int	ft_atoi_atoi(char *str, int minus)
 int			ft_atoi(const char *str)
 {
 	int		i;
-	int		fin;
+	long	fin;
 	char	*s;
 	int		minus;
 
@@ -51,5 +52,6 @@ int			ft_atoi(const char *str)
 		i++;
 	}
 	fin = ft_atoi_atoi(&s[i], minus);
-	return (fin);
+	fin = fin * minus;
+	return ((int)fin);
 }
