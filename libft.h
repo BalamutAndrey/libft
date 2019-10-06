@@ -6,7 +6,7 @@
 /*   By: eboris <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:38:03 by eboris            #+#    #+#             */
-/*   Updated: 2019/10/06 13:55:12 by eboris           ###   ########.fr       */
+/*   Updated: 2019/10/06 16:07:06 by eboris           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,5 @@ void				ft_putnstr(char const *s, size_t size);
 char				*ft_straddchr(char *str, char c);
 void				ft_puterror(char c);
 void				ft_puterrorstr(char const *s);
+void				ft_puterrornbr(int n);
 #endif
