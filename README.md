@@ -5,9 +5,15 @@
 06.10.2019: Добавлены функции:
 
 `int	get_next_line(const int fd, char **line);`
+
 `char	*ft_strjoinfree(char const *s1, char const *s2);`
+
 `void	ft_putnstr(char const *s, size_t size);`
+
 `char	*ft_straddchr(char *str, char c);`
+
 `void	ft_puterror(char c);`
+
 `void	ft_puterrorstr(char const *s);`
+
 `void	ft_puterrornbr(int n);`
